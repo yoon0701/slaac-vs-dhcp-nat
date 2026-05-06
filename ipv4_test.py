@@ -1,7 +1,7 @@
 from mininet.net import Mininet
 from mininet.node import OVSController
 from mininet.log import setLogLevel
-from base_topology import IoTExperimentTopo
+from base_topology import IoTExperimentTopo, NUM_SWITCHES
 import time
 import threading
 import os
@@ -12,16 +12,15 @@ TIMEOUT = 30
 def measure_total_v4(host, results, lock):
     intf = host.defaultIntf().name
 
-    # T1 직전에 IP 초기화 (DHCP 요청 전 클린 상태 보장)
     host.cmd(f'ip addr flush dev {intf}')
-    start_time = time.time()
+    t1 = time.time()
 
-    # 1. DHCP로 IP 할당
-    # dhclient는 플래그 없이 실행 시 즉시 데몬화되어 리턴 → IP 할당까지 폴링 필요
     host.cmd(f'dhclient {intf}')
 
-    while time.time() - start_time < TIMEOUT:
+    t_assigned = None
+    while time.time() - t1 < TIMEOUT:
         if host.cmd(f'ip -4 addr show {intf} | grep "inet "').strip():
+            t_assigned = time.time()
             break
         time.sleep(0.5)
     else:
@@ -30,47 +29,79 @@ def measure_total_v4(host, results, lock):
         print(f"[{host.name}] DHCP 타임아웃")
         return
 
-    # 2. NAT 테이블 생성 + 외부망 첫 패킷 도달 확인
     output = host.cmd(f'ping -c 1 -W 2 {EXTERNAL_IP}')
     success = ' 1 received' in output
+    t2 = time.time()
 
-    end_time = time.time()
-    latency = end_time - start_time
+    addr_lat = t_assigned - t1        # DHCP 4-way handshake 시간
+    pkt_lat  = t2 - t_assigned        # ARP + NAT 엔트리 생성 + ping RTT
+    total_lat = t2 - t1
 
     with lock:
         if success:
-            results['success'].append(latency)
-            print(f"[{host.name}] 통합 연결 완료! (DHCP+NAT+Ping): {latency:.4f}s")
+            results['success'].append({
+                'address':      addr_lat,
+                'first_packet': pkt_lat,
+                'total':        total_lat,
+            })
+            print(f"[{host.name}] 완료: addr={addr_lat:.3f}s  pkt={pkt_lat:.3f}s  total={total_lat:.3f}s")
         else:
             results['fail'] += 1
             print(f"[{host.name}] Ping 실패 (IP 할당 후 NAT/라우팅 오류)")
 
-def run_total_v4_experiment(n=50):
-    # with_external=True: net.start() 이전에 ext 호스트와 r1-eth1 링크 생성
-    topo = IoTExperimentTopo(n=n, with_external=True)
+
+def run_total_v4_experiment(n=50, num_switches=NUM_SWITCHES):
+    topo = IoTExperimentTopo(n=n, num_switches=num_switches, with_external=True)
     net = Mininet(topo=topo, controller=OVSController)
     net.start()
 
-    r1 = net.get('r1')
+    r1  = net.get('r1')
     ext = net.get('ext')
 
-    # 외부 서버 IPv4 설정
-    ext.cmd(f'ifconfig ext-eth0 {EXTERNAL_IP} netmask 255.255.255.0')
-    ext.cmd('route add default gw 203.0.113.1')
+    # r1 내부 인터페이스: 스위치별 서브넷 (10.0.i.1/24)
+    for i in range(1, num_switches + 1):
+        intf = f'r1-eth{i - 1}'
+        r1.cmd(f'ip addr flush dev {intf}')
+        r1.cmd(f'ip addr add 10.0.{i}.1/24 dev {intf}')
+        r1.cmd(f'ip link set {intf} up')
 
-    # r1 외부 인터페이스 및 NAT 설정
-    r1.cmd('ifconfig r1-eth1 203.0.113.1 netmask 255.255.255.0')
+    # r1 외부 인터페이스
+    ext_intf = f'r1-eth{num_switches}'
+    r1.cmd(f'ip addr flush dev {ext_intf}')
+    r1.cmd(f'ip addr add 203.0.113.1/24 dev {ext_intf}')
+    r1.cmd(f'ip link set {ext_intf} up')
+
     r1.cmd('sysctl -w net.ipv4.ip_forward=1')
-    r1.cmd('iptables -t nat -A POSTROUTING -o r1-eth1 -j MASQUERADE')
+    r1.cmd('iptables -t nat -F')
+    r1.cmd(f'iptables -t nat -A POSTROUTING -o {ext_intf} -j MASQUERADE')
 
-    # DHCP 서버 실행 (이전 실행 잔존 dhcpd 정리)
+    # 외부 서버 설정
+    ext.cmd('ip addr flush dev ext-eth0')
+    ext.cmd('ip addr add 203.0.113.2/24 dev ext-eth0')
+    ext.cmd('ip link set ext-eth0 up')
+    ext.cmd('ip route add default via 203.0.113.1')
+
+    # DHCP 설정 파일 동적 생성 (스위치별 서브넷)
+    dhcp_conf = "default-lease-time 600;\nmax-lease-time 7200;\n"
+    for i in range(1, num_switches + 1):
+        dhcp_conf += (
+            f"subnet 10.0.{i}.0 netmask 255.255.255.0 {{\n"
+            f"  range 10.0.{i}.2 10.0.{i}.254;\n"
+            f"  option routers 10.0.{i}.1;\n"
+            f"}}\n"
+        )
+    with open('/etc/dhcp/dhcpd.conf', 'w') as f:
+        f.write(dhcp_conf)
+
+    # DHCP 서버 시작
     os.system('pkill -f dhcpd 2>/dev/null; sleep 0.3')
     r1.cmd('touch /var/lib/dhcp/dhcpd.leases')
-    r1.cmd('dhcpd -4 -f -cf /etc/dhcp/dhcpd.conf r1-eth0 &')
+    internal_intfs = ' '.join(f'r1-eth{i - 1}' for i in range(1, num_switches + 1))
+    r1.cmd(f'dhcpd -4 -f -cf /etc/dhcp/dhcpd.conf {internal_intfs} &')
 
     time.sleep(2)
 
-    print(f"\n--- {n}대 기기 IPv4 통합 지연 시간 측정 시작 ---")
+    print(f"\n--- {n}대 기기 / {num_switches}개 스위치 / IPv4 지연 측정 시작 ---")
     threads = []
     results = {'success': [], 'fail': 0}
     lock = threading.Lock()
@@ -84,30 +115,50 @@ def run_total_v4_experiment(n=50):
     for t in threads:
         t.join()
 
-    success = results['success']
-    fail_count = results['fail']
-    success_rate = len(success) / n * 100
-    avg_success = sum(success) / len(success) if success else None
-    avg_total   = (sum(success) + fail_count * TIMEOUT) / n if success else TIMEOUT
+    # dhclient 프로세스 정리 (다음 실험 오염 방지)
+    for i in range(1, n + 1):
+        net.get(f'iot{i}').cmd('pkill -f dhclient 2>/dev/null')
 
-    print(f"\n{'='*50}")
-    print(f"✅ IPv4 실험 결과 (n={n})")
-    print(f"   성공률: {len(success)}/{n}대 ({success_rate:.1f}%)")
-    if avg_success:
-        print(f"   성공 평균 레이턴시:  {avg_success:.4f}s")
-        print(f"   전체 평균 레이턴시:  {avg_total:.4f}s  (실패={TIMEOUT}s 처리)")
+    success_list = results['success']
+    fail_count   = results['fail']
+
+    def mean_of(key):
+        vals = [r[key] for r in success_list]
+        return round(sum(vals) / len(vals), 4) if vals else None
+
+    success_rate = round(len(success_list) / n * 100, 1)
+    avg_total    = round(
+        (sum(r['total'] for r in success_list) + fail_count * TIMEOUT) / n, 4
+    )
+
+    result = {
+        'n':                        n,
+        'num_switches':             num_switches,
+        'protocol':                 'IPv4',
+        'success':                  len(success_list),
+        'fail':                     fail_count,
+        'success_rate':             success_rate,
+        'avg_address_latency':      mean_of('address'),      # DHCP 시간
+        'avg_first_packet_latency': mean_of('first_packet'), # ARP+NAT+RTT
+        'avg_total_latency':        avg_total,
+        'avg_ra_wait':              None,
+        'avg_dad_latency':          None,
+    }
+
+    print(f"\n{'='*55}")
+    print(f"✅ IPv4 실험 결과 (n={n}, switches={num_switches})")
+    print(f"   성공률: {len(success_list)}/{n}대 ({success_rate:.1f}%)")
+    if result['avg_address_latency'] is not None:
+        print(f"   주소 할당 (DHCP):  {result['avg_address_latency']:.4f}s  [T_assigned - T1]")
+        print(f"   첫 패킷 (ARP+NAT): {result['avg_first_packet_latency']:.4f}s  [T2 - T_assigned]")
+        print(f"   전체 평균:         {avg_total:.4f}s  [T2 - T1, 실패={TIMEOUT}s 처리]")
     else:
         print("   ❌ 전원 연결 실패")
-    print(f"{'='*50}")
+    print(f"{'='*55}")
 
     net.stop()
-    return {
-        'n': n, 'protocol': 'IPv4',
-        'success': len(success), 'fail': fail_count,
-        'success_rate': round(success_rate, 1),
-        'avg_success_latency': round(avg_success, 4) if avg_success else None,
-        'avg_total_latency':   round(avg_total,   4),
-    }
+    return result
+
 
 if __name__ == '__main__':
     setLogLevel('error')
