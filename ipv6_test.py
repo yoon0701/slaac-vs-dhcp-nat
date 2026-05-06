@@ -43,7 +43,7 @@ def measure_total_v6(host, results, lock):
                 t_ra = t_assigned
             break
 
-        time.sleep(0.5)
+        time.sleep(0.05)   # 0.5s → 0.05s: 폴링 오차 ±500ms → ±50ms
     else:
         with lock:
             results['fail'] += 1
@@ -128,8 +128,12 @@ def run_total_v6_experiment(n=50, num_switches=NUM_SWITCHES):
     with open('/etc/radvd.conf', 'w') as f:
         f.write(radvd_conf)
 
-    # radvd 시작 (고아 프로세스 정리 후)
-    os.system('pkill -f radvd 2>/dev/null; sleep 0.3')
+    # radvd 시작 (기존 프로세스 완전 종료 후 기동)
+    os.system('pkill -f radvd 2>/dev/null')
+    for _ in range(20):          # 최대 2s 대기 → 포트 해제 확인
+        if os.system('pgrep -f radvd > /dev/null 2>&1') != 0:
+            break
+        time.sleep(0.1)
     r1.cmd('rm -f /run/radvd.pid')
     r1.cmd('radvd -C /etc/radvd.conf -m stderr &')
     time.sleep(0.5)

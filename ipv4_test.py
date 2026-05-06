@@ -22,7 +22,7 @@ def measure_total_v4(host, results, lock):
         if host.cmd(f'ip -4 addr show {intf} | grep "inet "').strip():
             t_assigned = time.time()
             break
-        time.sleep(0.5)
+        time.sleep(0.05)   # 0.5s → 0.05s: 폴링 오차 ±500ms → ±50ms
     else:
         with lock:
             results['fail'] += 1
@@ -93,13 +93,24 @@ def run_total_v4_experiment(n=50, num_switches=NUM_SWITCHES):
     with open('/etc/dhcp/dhcpd.conf', 'w') as f:
         f.write(dhcp_conf)
 
-    # DHCP 서버 시작
-    os.system('pkill -f dhcpd 2>/dev/null; sleep 0.3')
+    # DHCP 서버 시작 (기존 프로세스 완전 종료 후 기동)
+    os.system('pkill -f dhcpd 2>/dev/null')
+    for _ in range(20):          # 최대 2s 대기 → 포트 해제 확인
+        if os.system('pgrep -f dhcpd > /dev/null 2>&1') != 0:
+            break
+        time.sleep(0.1)
+
     r1.cmd('touch /var/lib/dhcp/dhcpd.leases')
     internal_intfs = ' '.join(f'r1-eth{i - 1}' for i in range(1, num_switches + 1))
     r1.cmd(f'dhcpd -4 -f -cf /etc/dhcp/dhcpd.conf {internal_intfs} &')
 
     time.sleep(2)
+
+    # dhcpd 기동 확인 (radvd와 동일한 방식)
+    if not r1.cmd('pgrep dhcpd').strip():
+        print("❌ dhcpd 시작 실패. 로그를 확인하세요.")
+        net.stop()
+        return None
 
     print(f"\n--- {n}대 기기 / {num_switches}개 스위치 / IPv4 지연 측정 시작 ---")
     threads = []
