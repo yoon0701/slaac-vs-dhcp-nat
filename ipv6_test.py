@@ -204,6 +204,8 @@ def run_total_v6_experiment(n=50, num_switches=NUM_SWITCHES):
         t = threading.Thread(target=measure_total_v6, args=(host, results, lock))
         threads.append(t)
         t.start()
+        # 순차 부팅 시뮬레이션: SLAAC 요청을 분산 (현실성 개선)
+        time.sleep(0.05)
 
     for t in threads:
         t.join()
