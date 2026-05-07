@@ -1,0 +1,19 @@
+Internet Systems Consortium DHCP Server 4.4.3-P1
+Copyright 2004-2022 Internet Systems Consortium.
+All rights reserved.
+For info, please visit https://www.isc.org/software/dhcp/
+Config file: /etc/dhcp/dhcpd.conf
+Database file: /var/lib/dhcp/dhcpd.leases
+PID file: /var/run/dhcpd.pid
+Wrote 1265 leases to leases file.
+Listening on LPF/r1-eth4/8e:95:bb:0c:09:40/10.0.5.0/24
+Sending on   LPF/r1-eth4/8e:95:bb:0c:09:40/10.0.5.0/24
+Listening on LPF/r1-eth3/32:bb:71:25:55:03/10.0.4.0/24
+Sending on   LPF/r1-eth3/32:bb:71:25:55:03/10.0.4.0/24
+Listening on LPF/r1-eth2/42:c8:96:0d:1a:0d/10.0.3.0/24
+Sending on   LPF/r1-eth2/42:c8:96:0d:1a:0d/10.0.3.0/24
+Listening on LPF/r1-eth1/12:ea:ea:06:bc:15/10.0.2.0/24
+Sending on   LPF/r1-eth1/12:ea:ea:06:bc:15/10.0.2.0/24
+Listening on LPF/r1-eth0/aa:dd:18:a3:c2:44/10.0.1.0/24
+Sending on   LPF/r1-eth0/aa:dd:18:a3:c2:44/10.0.1.0/24
+Sending on   Socket/fallback/fallback-net

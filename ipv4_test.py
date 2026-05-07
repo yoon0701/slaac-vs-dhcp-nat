@@ -1,5 +1,5 @@
 from mininet.net import Mininet
-from mininet.node import OVSController
+from mininet.node import OVSBridge
 from mininet.log import setLogLevel
 from base_topology import IoTExperimentTopo, NUM_SWITCHES
 import time
@@ -40,6 +40,7 @@ def measure_total_v4(host, results, lock):
     with lock:
         if success:
             results['success'].append({
+                'host':         host.name,
                 'address':      addr_lat,
                 'first_packet': pkt_lat,
                 'total':        total_lat,
@@ -52,7 +53,7 @@ def measure_total_v4(host, results, lock):
 
 def run_total_v4_experiment(n=50, num_switches=NUM_SWITCHES):
     topo = IoTExperimentTopo(n=n, num_switches=num_switches, with_external=True)
-    net = Mininet(topo=topo, controller=OVSController)
+    net = Mininet(topo=topo, switch=OVSBridge, controller=None)
     net.start()
 
     r1  = net.get('r1')
@@ -100,17 +101,20 @@ def run_total_v4_experiment(n=50, num_switches=NUM_SWITCHES):
             break
         time.sleep(0.1)
 
-    r1.cmd('touch /var/lib/dhcp/dhcpd.leases')
+    os.system('mkdir -p /var/lib/dhcp && touch /var/lib/dhcp/dhcpd.leases && chmod 666 /var/lib/dhcp/dhcpd.leases')
     internal_intfs = ' '.join(f'r1-eth{i - 1}' for i in range(1, num_switches + 1))
-    r1.cmd(f'dhcpd -4 -f -cf /etc/dhcp/dhcpd.conf {internal_intfs} &')
+    r1.cmd(f'dhcpd -4 -f -lf /var/lib/dhcp/dhcpd.leases -cf /etc/dhcp/dhcpd.conf {internal_intfs} > /tmp/dhcpd.log 2>&1 &')
 
     time.sleep(2)
 
-    # dhcpd 기동 확인 (radvd와 동일한 방식)
+    # dhcpd 기동 확인
     if not r1.cmd('pgrep dhcpd').strip():
-        print("❌ dhcpd 시작 실패. 로그를 확인하세요.")
+        print("❌ dhcpd 시작 실패. 로그:")
+        print(open('/tmp/dhcpd.log').read())
         net.stop()
         return None
+
+    print("[dhcpd 로그] /tmp/dhcpd.log 확인 가능")
 
     print(f"\n--- {n}대 기기 / {num_switches}개 스위치 / IPv4 지연 측정 시작 ---")
     threads = []
@@ -139,8 +143,8 @@ def run_total_v4_experiment(n=50, num_switches=NUM_SWITCHES):
 
     success_rate = round(len(success_list) / n * 100, 1)
     avg_total    = round(
-        (sum(r['total'] for r in success_list) + fail_count * TIMEOUT) / n, 4
-    )
+        sum(r['total'] for r in success_list) / len(success_list), 4
+    ) if success_list else None
 
     result = {
         'n':                        n,
@@ -154,6 +158,7 @@ def run_total_v4_experiment(n=50, num_switches=NUM_SWITCHES):
         'avg_total_latency':        avg_total,
         'avg_ra_wait':              None,
         'avg_dad_latency':          None,
+        'raw':                      success_list,
     }
 
     print(f"\n{'='*55}")
@@ -162,7 +167,7 @@ def run_total_v4_experiment(n=50, num_switches=NUM_SWITCHES):
     if result['avg_address_latency'] is not None:
         print(f"   주소 할당 (DHCP):  {result['avg_address_latency']:.4f}s  [T_assigned - T1]")
         print(f"   첫 패킷 (ARP+NAT): {result['avg_first_packet_latency']:.4f}s  [T2 - T_assigned]")
-        print(f"   전체 평균:         {avg_total:.4f}s  [T2 - T1, 실패={TIMEOUT}s 처리]")
+        print(f"   전체 평균:         {avg_total:.4f}s  [T2 - T1, 성공 기기 기준]")
     else:
         print("   ❌ 전원 연결 실패")
     print(f"{'='*55}")

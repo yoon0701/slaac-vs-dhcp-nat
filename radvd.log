@@ -1,0 +1,566 @@
+[May 07 02:52:50] radvd (218148): version 2.19 started
+[May 07 02:52:56] radvd (218148): attempting to reread config file
+[May 07 02:52:56] radvd (218148): r1-eth4 not found: No such device
+[May 07 02:52:56] radvd (218148): r1-eth3 not found: No such device
+[May 07 02:52:56] radvd (218148): r1-eth2 not found: No such device
+[May 07 02:52:56] radvd (218148): r1-eth1 not found: No such device
+[May 07 02:52:56] radvd (218148): r1-eth0 not found: No such device
+[May 07 02:52:56] radvd (218148): resuming normal operation
+[May 07 02:52:56] radvd (218148): attempting to reread config file
+[May 07 02:52:56] radvd (218148): r1-eth4 not found: No such device
+[May 07 02:52:56] radvd (218148): r1-eth3 not found: No such device
+[May 07 02:52:56] radvd (218148): r1-eth2 not found: No such device
+[May 07 02:52:56] radvd (218148): r1-eth1 not found: No such device
+[May 07 02:52:56] radvd (218148): r1-eth0 not found: No such device
+[May 07 02:52:56] radvd (218148): resuming normal operation
+[May 07 02:53:00] radvd (218148): exiting, 1 sigterm(s) received
+[May 07 02:53:00] radvd (218148): sending stop adverts
+[May 07 02:53:00] radvd (218148): removing /run/radvd.pid
+[May 07 02:53:00] radvd (218148): returning from radvd main
+[May 07 02:53:02] radvd (218801): version 2.19 started
+[May 07 02:53:09] radvd (218801): attempting to reread config file
+[May 07 02:53:09] radvd (218801): r1-eth4 not found: No such device
+[May 07 02:53:09] radvd (218801): r1-eth3 not found: No such device
+[May 07 02:53:09] radvd (218801): r1-eth2 not found: No such device
+[May 07 02:53:09] radvd (218801): r1-eth1 not found: No such device
+[May 07 02:53:09] radvd (218801): r1-eth0 not found: No such device
+[May 07 02:53:09] radvd (218801): resuming normal operation
+[May 07 02:53:09] radvd (218801): attempting to reread config file
+[May 07 02:53:09] radvd (218801): r1-eth4 not found: No such device
+[May 07 02:53:09] radvd (218801): r1-eth3 not found: No such device
+[May 07 02:53:09] radvd (218801): r1-eth2 not found: No such device
+[May 07 02:53:09] radvd (218801): r1-eth1 not found: No such device
+[May 07 02:53:09] radvd (218801): r1-eth0 not found: No such device
+[May 07 02:53:09] radvd (218801): resuming normal operation
+[May 07 02:53:12] radvd (218801): exiting, 1 sigterm(s) received
+[May 07 02:53:12] radvd (218801): sending stop adverts
+[May 07 02:53:12] radvd (218801): removing /run/radvd.pid
+[May 07 02:53:12] radvd (218801): returning from radvd main
+[May 07 02:53:14] radvd (219464): version 2.19 started
+[May 07 02:53:20] radvd (219464): attempting to reread config file
+[May 07 02:53:21] radvd (219464): r1-eth4 not found: No such device
+[May 07 02:53:21] radvd (219464): r1-eth3 not found: No such device
+[May 07 02:53:21] radvd (219464): r1-eth2 not found: No such device
+[May 07 02:53:21] radvd (219464): r1-eth1 not found: No such device
+[May 07 02:53:21] radvd (219464): r1-eth0 not found: No such device
+[May 07 02:53:21] radvd (219464): resuming normal operation
+[May 07 02:53:21] radvd (219464): attempting to reread config file
+[May 07 02:53:21] radvd (219464): r1-eth4 not found: No such device
+[May 07 02:53:21] radvd (219464): r1-eth3 not found: No such device
+[May 07 02:53:21] radvd (219464): r1-eth2 not found: No such device
+[May 07 02:53:21] radvd (219464): r1-eth1 not found: No such device
+[May 07 02:53:21] radvd (219464): r1-eth0 not found: No such device
+[May 07 02:53:21] radvd (219464): resuming normal operation
+[May 07 02:53:24] radvd (219464): exiting, 1 sigterm(s) received
+[May 07 02:53:24] radvd (219464): sending stop adverts
+[May 07 02:53:24] radvd (219464): removing /run/radvd.pid
+[May 07 02:53:24] radvd (219464): returning from radvd main
+[May 07 02:53:26] radvd (220178): version 2.19 started
+[May 07 02:53:32] radvd (220178): attempting to reread config file
+[May 07 02:53:32] radvd (220178): r1-eth4 not found: No such device
+[May 07 02:53:32] radvd (220178): r1-eth3 not found: No such device
+[May 07 02:53:32] radvd (220178): r1-eth2 not found: No such device
+[May 07 02:53:32] radvd (220178): r1-eth1 not found: No such device
+[May 07 02:53:32] radvd (220178): r1-eth0 not found: No such device
+[May 07 02:53:32] radvd (220178): resuming normal operation
+[May 07 02:53:32] radvd (220178): attempting to reread config file
+[May 07 02:53:32] radvd (220178): r1-eth4 not found: No such device
+[May 07 02:53:32] radvd (220178): r1-eth3 not found: No such device
+[May 07 02:53:32] radvd (220178): r1-eth2 not found: No such device
+[May 07 02:53:32] radvd (220178): r1-eth1 not found: No such device
+[May 07 02:53:32] radvd (220178): r1-eth0 not found: No such device
+[May 07 02:53:32] radvd (220178): resuming normal operation
+[May 07 02:53:35] radvd (220178): exiting, 1 sigterm(s) received
+[May 07 02:53:35] radvd (220178): sending stop adverts
+[May 07 02:53:35] radvd (220178): removing /run/radvd.pid
+[May 07 02:53:35] radvd (220178): returning from radvd main
+[May 07 02:53:38] radvd (220785): version 2.19 started
+[May 07 02:53:44] radvd (220785): attempting to reread config file
+[May 07 02:53:44] radvd (220785): r1-eth4 not found: No such device
+[May 07 02:53:44] radvd (220785): r1-eth3 not found: No such device
+[May 07 02:53:44] radvd (220785): r1-eth2 not found: No such device
+[May 07 02:53:44] radvd (220785): r1-eth1 not found: No such device
+[May 07 02:53:44] radvd (220785): r1-eth0 not found: No such device
+[May 07 02:53:44] radvd (220785): resuming normal operation
+[May 07 02:53:44] radvd (220785): attempting to reread config file
+[May 07 02:53:44] radvd (220785): r1-eth4 not found: No such device
+[May 07 02:53:44] radvd (220785): r1-eth3 not found: No such device
+[May 07 02:53:44] radvd (220785): r1-eth2 not found: No such device
+[May 07 02:53:44] radvd (220785): r1-eth1 not found: No such device
+[May 07 02:53:44] radvd (220785): r1-eth0 not found: No such device
+[May 07 02:53:44] radvd (220785): resuming normal operation
+[May 07 02:55:05] radvd (220785): exiting, 1 sigterm(s) received
+[May 07 02:55:05] radvd (220785): sending stop adverts
+[May 07 02:55:05] radvd (220785): removing /run/radvd.pid
+[May 07 02:55:05] radvd (220785): returning from radvd main
+[May 07 02:55:07] radvd (226460): version 2.19 started
+[May 07 02:55:14] radvd (226460): attempting to reread config file
+[May 07 02:55:14] radvd (226460): r1-eth4 not found: No such device
+[May 07 02:55:14] radvd (226460): r1-eth3 not found: No such device
+[May 07 02:55:14] radvd (226460): r1-eth2 not found: No such device
+[May 07 02:55:14] radvd (226460): r1-eth1 not found: No such device
+[May 07 02:55:14] radvd (226460): r1-eth0 not found: No such device
+[May 07 02:55:14] radvd (226460): resuming normal operation
+[May 07 02:55:14] radvd (226460): attempting to reread config file
+[May 07 02:55:14] radvd (226460): r1-eth4 not found: No such device
+[May 07 02:55:14] radvd (226460): r1-eth3 not found: No such device
+[May 07 02:55:14] radvd (226460): r1-eth2 not found: No such device
+[May 07 02:55:14] radvd (226460): r1-eth1 not found: No such device
+[May 07 02:55:14] radvd (226460): r1-eth0 not found: No such device
+[May 07 02:55:14] radvd (226460): resuming normal operation
+[May 07 02:55:17] radvd (226460): exiting, 1 sigterm(s) received
+[May 07 02:55:17] radvd (226460): sending stop adverts
+[May 07 02:55:17] radvd (226460): removing /run/radvd.pid
+[May 07 02:55:17] radvd (226460): returning from radvd main
+[May 07 02:55:20] radvd (228103): version 2.19 started
+[May 07 02:55:26] radvd (228103): attempting to reread config file
+[May 07 02:55:26] radvd (228103): r1-eth4 not found: No such device
+[May 07 02:55:26] radvd (228103): r1-eth3 not found: No such device
+[May 07 02:55:26] radvd (228103): r1-eth2 not found: No such device
+[May 07 02:55:26] radvd (228103): r1-eth1 not found: No such device
+[May 07 02:55:26] radvd (228103): r1-eth0 not found: No such device
+[May 07 02:55:26] radvd (228103): resuming normal operation
+[May 07 02:55:26] radvd (228103): attempting to reread config file
+[May 07 02:55:26] radvd (228103): r1-eth4 not found: No such device
+[May 07 02:55:26] radvd (228103): r1-eth3 not found: No such device
+[May 07 02:55:26] radvd (228103): r1-eth2 not found: No such device
+[May 07 02:55:26] radvd (228103): r1-eth1 not found: No such device
+[May 07 02:55:26] radvd (228103): r1-eth0 not found: No such device
+[May 07 02:55:26] radvd (228103): resuming normal operation
+[May 07 02:55:30] radvd (228103): exiting, 1 sigterm(s) received
+[May 07 02:55:30] radvd (228103): sending stop adverts
+[May 07 02:55:30] radvd (228103): removing /run/radvd.pid
+[May 07 02:55:30] radvd (228103): returning from radvd main
+[May 07 02:55:32] radvd (229661): version 2.19 started
+[May 07 02:55:39] radvd (229661): attempting to reread config file
+[May 07 02:55:39] radvd (229661): r1-eth4 not found: No such device
+[May 07 02:55:39] radvd (229661): r1-eth3 not found: No such device
+[May 07 02:55:39] radvd (229661): r1-eth2 not found: No such device
+[May 07 02:55:39] radvd (229661): r1-eth1 not found: No such device
+[May 07 02:55:39] radvd (229661): r1-eth0 not found: No such device
+[May 07 02:55:39] radvd (229661): resuming normal operation
+[May 07 02:55:39] radvd (229661): attempting to reread config file
+[May 07 02:55:39] radvd (229661): r1-eth4 not found: No such device
+[May 07 02:55:39] radvd (229661): r1-eth3 not found: No such device
+[May 07 02:55:39] radvd (229661): r1-eth2 not found: No such device
+[May 07 02:55:39] radvd (229661): r1-eth1 not found: No such device
+[May 07 02:55:39] radvd (229661): r1-eth0 not found: No such device
+[May 07 02:55:39] radvd (229661): resuming normal operation
+[May 07 02:55:42] radvd (229661): exiting, 1 sigterm(s) received
+[May 07 02:55:42] radvd (229661): sending stop adverts
+[May 07 02:55:42] radvd (229661): removing /run/radvd.pid
+[May 07 02:55:42] radvd (229661): returning from radvd main
+[May 07 02:55:44] radvd (231107): version 2.19 started
+[May 07 02:55:51] radvd (231107): attempting to reread config file
+[May 07 02:55:51] radvd (231107): r1-eth4 not found: No such device
+[May 07 02:55:51] radvd (231107): r1-eth3 not found: No such device
+[May 07 02:55:51] radvd (231107): r1-eth2 not found: No such device
+[May 07 02:55:51] radvd (231107): r1-eth1 not found: No such device
+[May 07 02:55:51] radvd (231107): r1-eth0 not found: No such device
+[May 07 02:55:51] radvd (231107): resuming normal operation
+[May 07 02:55:51] radvd (231107): attempting to reread config file
+[May 07 02:55:51] radvd (231107): r1-eth4 not found: No such device
+[May 07 02:55:51] radvd (231107): r1-eth3 not found: No such device
+[May 07 02:55:51] radvd (231107): r1-eth2 not found: No such device
+[May 07 02:55:51] radvd (231107): r1-eth1 not found: No such device
+[May 07 02:55:51] radvd (231107): r1-eth0 not found: No such device
+[May 07 02:55:51] radvd (231107): resuming normal operation
+[May 07 02:55:54] radvd (231107): exiting, 1 sigterm(s) received
+[May 07 02:55:54] radvd (231107): sending stop adverts
+[May 07 02:55:54] radvd (231107): removing /run/radvd.pid
+[May 07 02:55:54] radvd (231107): returning from radvd main
+[May 07 02:55:57] radvd (232626): version 2.19 started
+[May 07 02:56:02] radvd (232626): attempting to reread config file
+[May 07 02:56:02] radvd (232626): r1-eth4 not found: No such device
+[May 07 02:56:02] radvd (232626): r1-eth3 not found: No such device
+[May 07 02:56:02] radvd (232626): r1-eth2 not found: No such device
+[May 07 02:56:02] radvd (232626): r1-eth1 not found: No such device
+[May 07 02:56:02] radvd (232626): r1-eth0 not found: No such device
+[May 07 02:56:02] radvd (232626): resuming normal operation
+[May 07 02:56:02] radvd (232626): attempting to reread config file
+[May 07 02:56:02] radvd (232626): r1-eth4 not found: No such device
+[May 07 02:56:02] radvd (232626): r1-eth3 not found: No such device
+[May 07 02:56:02] radvd (232626): r1-eth2 not found: No such device
+[May 07 02:56:02] radvd (232626): r1-eth1 not found: No such device
+[May 07 02:56:02] radvd (232626): r1-eth0 not found: No such device
+[May 07 02:56:02] radvd (232626): resuming normal operation
+[May 07 02:56:58] radvd (232626): exiting, 1 sigterm(s) received
+[May 07 02:56:58] radvd (232626): sending stop adverts
+[May 07 02:56:58] radvd (232626): removing /run/radvd.pid
+[May 07 02:56:58] radvd (232626): returning from radvd main
+[May 07 02:57:00] radvd (239722): version 2.19 started
+[May 07 02:57:07] radvd (239722): attempting to reread config file
+[May 07 02:57:07] radvd (239722): r1-eth4 not found: No such device
+[May 07 02:57:07] radvd (239722): r1-eth3 not found: No such device
+[May 07 02:57:07] radvd (239722): r1-eth2 not found: No such device
+[May 07 02:57:07] radvd (239722): r1-eth1 not found: No such device
+[May 07 02:57:07] radvd (239722): r1-eth0 not found: No such device
+[May 07 02:57:07] radvd (239722): resuming normal operation
+[May 07 02:57:07] radvd (239722): attempting to reread config file
+[May 07 02:57:07] radvd (239722): r1-eth4 not found: No such device
+[May 07 02:57:07] radvd (239722): r1-eth3 not found: No such device
+[May 07 02:57:07] radvd (239722): r1-eth2 not found: No such device
+[May 07 02:57:07] radvd (239722): r1-eth1 not found: No such device
+[May 07 02:57:07] radvd (239722): r1-eth0 not found: No such device
+[May 07 02:57:07] radvd (239722): resuming normal operation
+[May 07 02:57:11] radvd (239722): exiting, 1 sigterm(s) received
+[May 07 02:57:11] radvd (239722): sending stop adverts
+[May 07 02:57:11] radvd (239722): removing /run/radvd.pid
+[May 07 02:57:11] radvd (239722): returning from radvd main
+[May 07 02:57:13] radvd (241947): version 2.19 started
+[May 07 02:57:20] radvd (241947): attempting to reread config file
+[May 07 02:57:20] radvd (241947): r1-eth4 not found: No such device
+[May 07 02:57:20] radvd (241947): r1-eth3 not found: No such device
+[May 07 02:57:20] radvd (241947): r1-eth2 not found: No such device
+[May 07 02:57:20] radvd (241947): r1-eth1 not found: No such device
+[May 07 02:57:20] radvd (241947): r1-eth0 not found: No such device
+[May 07 02:57:20] radvd (241947): resuming normal operation
+[May 07 02:57:20] radvd (241947): attempting to reread config file
+[May 07 02:57:20] radvd (241947): r1-eth4 not found: No such device
+[May 07 02:57:20] radvd (241947): r1-eth3 not found: No such device
+[May 07 02:57:20] radvd (241947): r1-eth2 not found: No such device
+[May 07 02:57:20] radvd (241947): r1-eth1 not found: No such device
+[May 07 02:57:20] radvd (241947): r1-eth0 not found: No such device
+[May 07 02:57:20] radvd (241947): resuming normal operation
+[May 07 02:57:24] radvd (241947): exiting, 1 sigterm(s) received
+[May 07 02:57:24] radvd (241947): sending stop adverts
+[May 07 02:57:24] radvd (241947): removing /run/radvd.pid
+[May 07 02:57:24] radvd (241947): returning from radvd main
+[May 07 02:57:26] radvd (244349): version 2.19 started
+[May 07 02:57:33] radvd (244349): attempting to reread config file
+[May 07 02:57:33] radvd (244349): r1-eth4 not found: No such device
+[May 07 02:57:33] radvd (244349): r1-eth3 not found: No such device
+[May 07 02:57:33] radvd (244349): r1-eth2 not found: No such device
+[May 07 02:57:33] radvd (244349): r1-eth1 not found: No such device
+[May 07 02:57:33] radvd (244349): r1-eth0 not found: No such device
+[May 07 02:57:33] radvd (244349): resuming normal operation
+[May 07 02:57:33] radvd (244349): attempting to reread config file
+[May 07 02:57:33] radvd (244349): r1-eth4 not found: No such device
+[May 07 02:57:33] radvd (244349): r1-eth3 not found: No such device
+[May 07 02:57:33] radvd (244349): r1-eth2 not found: No such device
+[May 07 02:57:33] radvd (244349): r1-eth1 not found: No such device
+[May 07 02:57:33] radvd (244349): r1-eth0 not found: No such device
+[May 07 02:57:33] radvd (244349): resuming normal operation
+[May 07 02:57:37] radvd (244349): exiting, 1 sigterm(s) received
+[May 07 02:57:37] radvd (244349): sending stop adverts
+[May 07 02:57:37] radvd (244349): removing /run/radvd.pid
+[May 07 02:57:37] radvd (244349): returning from radvd main
+[May 07 02:57:39] radvd (246559): version 2.19 started
+[May 07 02:57:45] radvd (246559): attempting to reread config file
+[May 07 02:57:45] radvd (246559): r1-eth4 not found: No such device
+[May 07 02:57:45] radvd (246559): r1-eth3 not found: No such device
+[May 07 02:57:45] radvd (246559): r1-eth2 not found: No such device
+[May 07 02:57:46] radvd (246559): r1-eth1 not found: No such device
+[May 07 02:57:46] radvd (246559): r1-eth0 not found: No such device
+[May 07 02:57:46] radvd (246559): resuming normal operation
+[May 07 02:57:46] radvd (246559): attempting to reread config file
+[May 07 02:57:46] radvd (246559): r1-eth4 not found: No such device
+[May 07 02:57:46] radvd (246559): r1-eth3 not found: No such device
+[May 07 02:57:46] radvd (246559): r1-eth2 not found: No such device
+[May 07 02:57:46] radvd (246559): r1-eth1 not found: No such device
+[May 07 02:57:46] radvd (246559): r1-eth0 not found: No such device
+[May 07 02:57:46] radvd (246559): resuming normal operation
+[May 07 02:57:50] radvd (246559): exiting, 1 sigterm(s) received
+[May 07 02:57:50] radvd (246559): sending stop adverts
+[May 07 02:57:50] radvd (246559): removing /run/radvd.pid
+[May 07 02:57:50] radvd (246559): returning from radvd main
+[May 07 02:57:52] radvd (249114): version 2.19 started
+[May 07 02:57:58] radvd (249114): attempting to reread config file
+[May 07 02:57:58] radvd (249114): r1-eth4 not found: No such device
+[May 07 02:57:58] radvd (249114): r1-eth3 not found: No such device
+[May 07 02:57:58] radvd (249114): r1-eth2 not found: No such device
+[May 07 02:57:58] radvd (249114): r1-eth1 not found: No such device
+[May 07 02:57:58] radvd (249114): r1-eth0 not found: No such device
+[May 07 02:57:58] radvd (249114): resuming normal operation
+[May 07 02:57:58] radvd (249114): attempting to reread config file
+[May 07 02:57:58] radvd (249114): r1-eth4 not found: No such device
+[May 07 02:57:58] radvd (249114): r1-eth3 not found: No such device
+[May 07 02:57:58] radvd (249114): r1-eth2 not found: No such device
+[May 07 02:57:58] radvd (249114): r1-eth1 not found: No such device
+[May 07 02:57:58] radvd (249114): r1-eth0 not found: No such device
+[May 07 02:57:58] radvd (249114): resuming normal operation
+[May 07 02:59:30] radvd (249114): exiting, 1 sigterm(s) received
+[May 07 02:59:30] radvd (249114): sending stop adverts
+[May 07 02:59:30] radvd (249114): removing /run/radvd.pid
+[May 07 02:59:30] radvd (249114): returning from radvd main
+[May 07 02:59:32] radvd (263445): version 2.19 started
+[May 07 02:59:39] radvd (263445): attempting to reread config file
+[May 07 02:59:39] radvd (263445): r1-eth4 not found: No such device
+[May 07 02:59:39] radvd (263445): r1-eth3 not found: No such device
+[May 07 02:59:39] radvd (263445): r1-eth2 not found: No such device
+[May 07 02:59:39] radvd (263445): r1-eth1 not found: No such device
+[May 07 02:59:39] radvd (263445): r1-eth0 not found: No such device
+[May 07 02:59:39] radvd (263445): resuming normal operation
+[May 07 02:59:39] radvd (263445): attempting to reread config file
+[May 07 02:59:39] radvd (263445): r1-eth4 not found: No such device
+[May 07 02:59:39] radvd (263445): r1-eth3 not found: No such device
+[May 07 02:59:39] radvd (263445): r1-eth2 not found: No such device
+[May 07 02:59:39] radvd (263445): r1-eth1 not found: No such device
+[May 07 02:59:39] radvd (263445): r1-eth0 not found: No such device
+[May 07 02:59:39] radvd (263445): resuming normal operation
+[May 07 02:59:44] radvd (263445): exiting, 1 sigterm(s) received
+[May 07 02:59:44] radvd (263445): sending stop adverts
+[May 07 02:59:44] radvd (263445): removing /run/radvd.pid
+[May 07 02:59:44] radvd (263445): returning from radvd main
+[May 07 02:59:46] radvd (266930): version 2.19 started
+[May 07 02:59:53] radvd (266930): attempting to reread config file
+[May 07 02:59:53] radvd (266930): r1-eth4 not found: No such device
+[May 07 02:59:53] radvd (266930): r1-eth3 not found: No such device
+[May 07 02:59:53] radvd (266930): r1-eth2 not found: No such device
+[May 07 02:59:53] radvd (266930): r1-eth1 not found: No such device
+[May 07 02:59:53] radvd (266930): r1-eth0 not found: No such device
+[May 07 02:59:53] radvd (266930): resuming normal operation
+[May 07 02:59:53] radvd (266930): attempting to reread config file
+[May 07 02:59:53] radvd (266930): r1-eth4 not found: No such device
+[May 07 02:59:53] radvd (266930): r1-eth3 not found: No such device
+[May 07 02:59:53] radvd (266930): r1-eth2 not found: No such device
+[May 07 02:59:53] radvd (266930): r1-eth1 not found: No such device
+[May 07 02:59:53] radvd (266930): r1-eth0 not found: No such device
+[May 07 02:59:53] radvd (266930): resuming normal operation
+[May 07 02:59:58] radvd (266930): exiting, 1 sigterm(s) received
+[May 07 02:59:58] radvd (266930): sending stop adverts
+[May 07 02:59:58] radvd (266930): removing /run/radvd.pid
+[May 07 02:59:58] radvd (266930): returning from radvd main
+[May 07 03:00:00] radvd (270266): version 2.19 started
+[May 07 03:00:07] radvd (270266): attempting to reread config file
+[May 07 03:00:07] radvd (270266): r1-eth4 not found: No such device
+[May 07 03:00:07] radvd (270266): r1-eth3 not found: No such device
+[May 07 03:00:07] radvd (270266): r1-eth2 not found: No such device
+[May 07 03:00:07] radvd (270266): r1-eth1 not found: No such device
+[May 07 03:00:07] radvd (270266): r1-eth0 not found: No such device
+[May 07 03:00:07] radvd (270266): resuming normal operation
+[May 07 03:00:07] radvd (270266): attempting to reread config file
+[May 07 03:00:07] radvd (270266): r1-eth4 not found: No such device
+[May 07 03:00:07] radvd (270266): r1-eth3 not found: No such device
+[May 07 03:00:07] radvd (270266): r1-eth2 not found: No such device
+[May 07 03:00:07] radvd (270266): r1-eth1 not found: No such device
+[May 07 03:00:07] radvd (270266): r1-eth0 not found: No such device
+[May 07 03:00:07] radvd (270266): resuming normal operation
+[May 07 03:00:12] radvd (270266): exiting, 1 sigterm(s) received
+[May 07 03:00:12] radvd (270266): sending stop adverts
+[May 07 03:00:12] radvd (270266): removing /run/radvd.pid
+[May 07 03:00:12] radvd (270266): returning from radvd main
+[May 07 03:00:15] radvd (273735): version 2.19 started
+[May 07 03:00:21] radvd (273735): attempting to reread config file
+[May 07 03:00:21] radvd (273735): r1-eth4 not found: No such device
+[May 07 03:00:21] radvd (273735): r1-eth3 not found: No such device
+[May 07 03:00:21] radvd (273735): r1-eth2 not found: No such device
+[May 07 03:00:21] radvd (273735): r1-eth1 not found: No such device
+[May 07 03:00:21] radvd (273735): r1-eth0 not found: No such device
+[May 07 03:00:21] radvd (273735): resuming normal operation
+[May 07 03:00:21] radvd (273735): attempting to reread config file
+[May 07 03:00:21] radvd (273735): r1-eth4 not found: No such device
+[May 07 03:00:21] radvd (273735): r1-eth3 not found: No such device
+[May 07 03:00:21] radvd (273735): r1-eth2 not found: No such device
+[May 07 03:00:21] radvd (273735): r1-eth1 not found: No such device
+[May 07 03:00:21] radvd (273735): r1-eth0 not found: No such device
+[May 07 03:00:21] radvd (273735): resuming normal operation
+[May 07 03:00:26] radvd (273735): exiting, 1 sigterm(s) received
+[May 07 03:00:26] radvd (273735): sending stop adverts
+[May 07 03:00:26] radvd (273735): removing /run/radvd.pid
+[May 07 03:00:26] radvd (273735): returning from radvd main
+[May 07 03:00:28] radvd (277334): version 2.19 started
+[May 07 03:00:35] radvd (277334): attempting to reread config file
+[May 07 03:00:35] radvd (277334): r1-eth4 not found: No such device
+[May 07 03:00:35] radvd (277334): r1-eth3 not found: No such device
+[May 07 03:00:35] radvd (277334): r1-eth2 not found: No such device
+[May 07 03:00:35] radvd (277334): r1-eth1 not found: No such device
+[May 07 03:00:35] radvd (277334): r1-eth0 not found: No such device
+[May 07 03:00:35] radvd (277334): resuming normal operation
+[May 07 03:00:35] radvd (277334): attempting to reread config file
+[May 07 03:00:35] radvd (277334): r1-eth4 not found: No such device
+[May 07 03:00:35] radvd (277334): r1-eth3 not found: No such device
+[May 07 03:00:35] radvd (277334): r1-eth2 not found: No such device
+[May 07 03:00:35] radvd (277334): r1-eth1 not found: No such device
+[May 07 03:00:35] radvd (277334): r1-eth0 not found: No such device
+[May 07 03:00:35] radvd (277334): resuming normal operation
+[May 07 03:02:00] radvd (277334): exiting, 1 sigterm(s) received
+[May 07 03:02:00] radvd (277334): sending stop adverts
+[May 07 03:02:00] radvd (277334): removing /run/radvd.pid
+[May 07 03:02:00] radvd (277334): returning from radvd main
+[May 07 03:02:03] radvd (302934): version 2.19 started
+[May 07 03:02:10] radvd (302934): attempting to reread config file
+[May 07 03:02:10] radvd (302934): r1-eth4 not found: No such device
+[May 07 03:02:10] radvd (302934): r1-eth3 not found: No such device
+[May 07 03:02:10] radvd (302934): r1-eth2 not found: No such device
+[May 07 03:02:10] radvd (302934): r1-eth1 not found: No such device
+[May 07 03:02:10] radvd (302934): r1-eth0 not found: No such device
+[May 07 03:02:10] radvd (302934): resuming normal operation
+[May 07 03:02:10] radvd (302934): attempting to reread config file
+[May 07 03:02:10] radvd (302934): r1-eth4 not found: No such device
+[May 07 03:02:10] radvd (302934): r1-eth3 not found: No such device
+[May 07 03:02:10] radvd (302934): r1-eth2 not found: No such device
+[May 07 03:02:10] radvd (302934): r1-eth1 not found: No such device
+[May 07 03:02:10] radvd (302934): r1-eth0 not found: No such device
+[May 07 03:02:10] radvd (302934): resuming normal operation
+[May 07 03:02:17] radvd (302934): exiting, 1 sigterm(s) received
+[May 07 03:02:17] radvd (302934): sending stop adverts
+[May 07 03:02:17] radvd (302934): removing /run/radvd.pid
+[May 07 03:02:17] radvd (302934): returning from radvd main
+[May 07 03:02:20] radvd (308100): version 2.19 started
+[May 07 03:02:27] radvd (308100): attempting to reread config file
+[May 07 03:02:27] radvd (308100): r1-eth4 not found: No such device
+[May 07 03:02:27] radvd (308100): r1-eth3 not found: No such device
+[May 07 03:02:27] radvd (308100): r1-eth2 not found: No such device
+[May 07 03:02:27] radvd (308100): r1-eth1 not found: No such device
+[May 07 03:02:27] radvd (308100): r1-eth0 not found: No such device
+[May 07 03:02:27] radvd (308100): resuming normal operation
+[May 07 03:02:27] radvd (308100): attempting to reread config file
+[May 07 03:02:27] radvd (308100): r1-eth4 not found: No such device
+[May 07 03:02:27] radvd (308100): r1-eth3 not found: No such device
+[May 07 03:02:27] radvd (308100): r1-eth2 not found: No such device
+[May 07 03:02:27] radvd (308100): r1-eth1 not found: No such device
+[May 07 03:02:27] radvd (308100): r1-eth0 not found: No such device
+[May 07 03:02:27] radvd (308100): resuming normal operation
+[May 07 03:02:34] radvd (308100): exiting, 1 sigterm(s) received
+[May 07 03:02:34] radvd (308100): sending stop adverts
+[May 07 03:02:34] radvd (308100): removing /run/radvd.pid
+[May 07 03:02:34] radvd (308100): returning from radvd main
+[May 07 03:02:37] radvd (313285): version 2.19 started
+[May 07 03:02:44] radvd (313285): attempting to reread config file
+[May 07 03:02:44] radvd (313285): r1-eth4 not found: No such device
+[May 07 03:02:44] radvd (313285): r1-eth3 not found: No such device
+[May 07 03:02:44] radvd (313285): r1-eth2 not found: No such device
+[May 07 03:02:44] radvd (313285): r1-eth1 not found: No such device
+[May 07 03:02:44] radvd (313285): r1-eth0 not found: No such device
+[May 07 03:02:44] radvd (313285): resuming normal operation
+[May 07 03:02:44] radvd (313285): attempting to reread config file
+[May 07 03:02:44] radvd (313285): r1-eth4 not found: No such device
+[May 07 03:02:44] radvd (313285): r1-eth3 not found: No such device
+[May 07 03:02:44] radvd (313285): r1-eth2 not found: No such device
+[May 07 03:02:44] radvd (313285): r1-eth1 not found: No such device
+[May 07 03:02:44] radvd (313285): r1-eth0 not found: No such device
+[May 07 03:02:44] radvd (313285): resuming normal operation
+[May 07 03:02:51] radvd (313285): exiting, 1 sigterm(s) received
+[May 07 03:02:51] radvd (313285): sending stop adverts
+[May 07 03:02:51] radvd (313285): removing /run/radvd.pid
+[May 07 03:02:51] radvd (313285): returning from radvd main
+[May 07 03:02:53] radvd (318451): version 2.19 started
+[May 07 03:03:01] radvd (318451): attempting to reread config file
+[May 07 03:03:01] radvd (318451): r1-eth4 not found: No such device
+[May 07 03:03:01] radvd (318451): r1-eth3 not found: No such device
+[May 07 03:03:01] radvd (318451): r1-eth2 not found: No such device
+[May 07 03:03:01] radvd (318451): r1-eth1 not found: No such device
+[May 07 03:03:01] radvd (318451): r1-eth0 not found: No such device
+[May 07 03:03:01] radvd (318451): resuming normal operation
+[May 07 03:03:01] radvd (318451): attempting to reread config file
+[May 07 03:03:01] radvd (318451): r1-eth4 not found: No such device
+[May 07 03:03:01] radvd (318451): r1-eth3 not found: No such device
+[May 07 03:03:01] radvd (318451): r1-eth2 not found: No such device
+[May 07 03:03:01] radvd (318451): r1-eth1 not found: No such device
+[May 07 03:03:01] radvd (318451): r1-eth0 not found: No such device
+[May 07 03:03:01] radvd (318451): resuming normal operation
+[May 07 03:03:07] radvd (318451): exiting, 1 sigterm(s) received
+[May 07 03:03:07] radvd (318451): sending stop adverts
+[May 07 03:03:07] radvd (318451): removing /run/radvd.pid
+[May 07 03:03:07] radvd (318451): returning from radvd main
+[May 07 03:03:10] radvd (323646): version 2.19 started
+[May 07 03:03:17] radvd (323646): attempting to reread config file
+[May 07 03:03:17] radvd (323646): r1-eth4 not found: No such device
+[May 07 03:03:17] radvd (323646): r1-eth3 not found: No such device
+[May 07 03:03:17] radvd (323646): r1-eth2 not found: No such device
+[May 07 03:03:17] radvd (323646): r1-eth1 not found: No such device
+[May 07 03:03:17] radvd (323646): r1-eth0 not found: No such device
+[May 07 03:03:17] radvd (323646): resuming normal operation
+[May 07 03:03:17] radvd (323646): attempting to reread config file
+[May 07 03:03:17] radvd (323646): r1-eth4 not found: No such device
+[May 07 03:03:17] radvd (323646): r1-eth3 not found: No such device
+[May 07 03:03:17] radvd (323646): r1-eth2 not found: No such device
+[May 07 03:03:17] radvd (323646): r1-eth1 not found: No such device
+[May 07 03:03:17] radvd (323646): r1-eth0 not found: No such device
+[May 07 03:03:17] radvd (323646): resuming normal operation
+[May 07 03:05:26] radvd (323646): exiting, 1 sigterm(s) received
+[May 07 03:05:26] radvd (323646): sending stop adverts
+[May 07 03:05:26] radvd (323646): removing /run/radvd.pid
+[May 07 03:05:26] radvd (323646): returning from radvd main
+[May 07 03:05:29] radvd (372346): version 2.19 started
+[May 07 03:05:40] radvd (372346): attempting to reread config file
+[May 07 03:05:40] radvd (372346): r1-eth4 not found: No such device
+[May 07 03:05:40] radvd (372346): r1-eth3 not found: No such device
+[May 07 03:05:40] radvd (372346): r1-eth2 not found: No such device
+[May 07 03:05:40] radvd (372346): r1-eth1 not found: No such device
+[May 07 03:05:40] radvd (372346): r1-eth0 not found: No such device
+[May 07 03:05:40] radvd (372346): resuming normal operation
+[May 07 03:05:40] radvd (372346): attempting to reread config file
+[May 07 03:05:40] radvd (372346): r1-eth4 not found: No such device
+[May 07 03:05:40] radvd (372346): r1-eth3 not found: No such device
+[May 07 03:05:40] radvd (372346): r1-eth2 not found: No such device
+[May 07 03:05:40] radvd (372346): r1-eth1 not found: No such device
+[May 07 03:05:40] radvd (372346): r1-eth0 not found: No such device
+[May 07 03:05:40] radvd (372346): resuming normal operation
+[May 07 03:05:51] radvd (372346): exiting, 1 sigterm(s) received
+[May 07 03:05:51] radvd (372346): sending stop adverts
+[May 07 03:05:51] radvd (372346): removing /run/radvd.pid
+[May 07 03:05:51] radvd (372346): returning from radvd main
+[May 07 03:05:53] radvd (381700): version 2.19 started
+[May 07 03:06:06] radvd (381700): attempting to reread config file
+[May 07 03:06:06] radvd (381700): r1-eth4 not found: No such device
+[May 07 03:06:06] radvd (381700): r1-eth3 not found: No such device
+[May 07 03:06:06] radvd (381700): r1-eth2 not found: No such device
+[May 07 03:06:06] radvd (381700): r1-eth1 not found: No such device
+[May 07 03:06:06] radvd (381700): r1-eth0 not found: No such device
+[May 07 03:06:06] radvd (381700): resuming normal operation
+[May 07 03:06:06] radvd (381700): attempting to reread config file
+[May 07 03:06:06] radvd (381700): r1-eth4 not found: No such device
+[May 07 03:06:06] radvd (381700): r1-eth3 not found: No such device
+[May 07 03:06:06] radvd (381700): r1-eth2 not found: No such device
+[May 07 03:06:06] radvd (381700): r1-eth1 not found: No such device
+[May 07 03:06:06] radvd (381700): r1-eth0 not found: No such device
+[May 07 03:06:06] radvd (381700): resuming normal operation
+[May 07 03:06:16] radvd (381700): exiting, 1 sigterm(s) received
+[May 07 03:06:16] radvd (381700): sending stop adverts
+[May 07 03:06:16] radvd (381700): removing /run/radvd.pid
+[May 07 03:06:16] radvd (381700): returning from radvd main
+[May 07 03:06:18] radvd (392166): version 2.19 started
+[May 07 03:06:30] radvd (392166): attempting to reread config file
+[May 07 03:06:30] radvd (392166): r1-eth4 not found: No such device
+[May 07 03:06:30] radvd (392166): r1-eth3 not found: No such device
+[May 07 03:06:30] radvd (392166): r1-eth2 not found: No such device
+[May 07 03:06:30] radvd (392166): r1-eth1 not found: No such device
+[May 07 03:06:30] radvd (392166): r1-eth0 not found: No such device
+[May 07 03:06:30] radvd (392166): resuming normal operation
+[May 07 03:06:30] radvd (392166): attempting to reread config file
+[May 07 03:06:30] radvd (392166): r1-eth4 not found: No such device
+[May 07 03:06:30] radvd (392166): r1-eth3 not found: No such device
+[May 07 03:06:30] radvd (392166): r1-eth2 not found: No such device
+[May 07 03:06:30] radvd (392166): r1-eth1 not found: No such device
+[May 07 03:06:30] radvd (392166): r1-eth0 not found: No such device
+[May 07 03:06:30] radvd (392166): resuming normal operation
+[May 07 03:06:41] radvd (392166): exiting, 1 sigterm(s) received
+[May 07 03:06:41] radvd (392166): sending stop adverts
+[May 07 03:06:41] radvd (392166): removing /run/radvd.pid
+[May 07 03:06:41] radvd (392166): returning from radvd main
+[May 07 03:06:43] radvd (400839): version 2.19 started
+[May 07 03:06:56] radvd (400839): attempting to reread config file
+[May 07 03:06:56] radvd (400839): r1-eth4 not found: No such device
+[May 07 03:06:56] radvd (400839): r1-eth3 not found: No such device
+[May 07 03:06:56] radvd (400839): r1-eth2 not found: No such device
+[May 07 03:06:56] radvd (400839): r1-eth1 not found: No such device
+[May 07 03:06:56] radvd (400839): r1-eth0 not found: No such device
+[May 07 03:06:56] radvd (400839): resuming normal operation
+[May 07 03:06:56] radvd (400839): attempting to reread config file
+[May 07 03:06:56] radvd (400839): r1-eth4 not found: No such device
+[May 07 03:06:56] radvd (400839): r1-eth3 not found: No such device
+[May 07 03:06:56] radvd (400839): r1-eth2 not found: No such device
+[May 07 03:06:56] radvd (400839): r1-eth1 not found: No such device
+[May 07 03:06:56] radvd (400839): r1-eth0 not found: No such device
+[May 07 03:06:56] radvd (400839): resuming normal operation
+[May 07 03:07:06] radvd (400839): exiting, 1 sigterm(s) received
+[May 07 03:07:06] radvd (400839): sending stop adverts
+[May 07 03:07:06] radvd (400839): removing /run/radvd.pid
+[May 07 03:07:06] radvd (400839): returning from radvd main
+[May 07 03:07:08] radvd (409813): version 2.19 started
+[May 07 03:07:20] radvd (409813): attempting to reread config file
+[May 07 03:07:20] radvd (409813): r1-eth4 not found: No such device
+[May 07 03:07:20] radvd (409813): r1-eth3 not found: No such device
+[May 07 03:07:20] radvd (409813): r1-eth2 not found: No such device
+[May 07 03:07:20] radvd (409813): r1-eth1 not found: No such device
+[May 07 03:07:20] radvd (409813): r1-eth0 not found: No such device
+[May 07 03:07:20] radvd (409813): resuming normal operation
+[May 07 03:07:20] radvd (409813): attempting to reread config file
+[May 07 03:07:20] radvd (409813): r1-eth4 not found: No such device
+[May 07 03:07:20] radvd (409813): r1-eth3 not found: No such device
+[May 07 03:07:20] radvd (409813): r1-eth2 not found: No such device
+[May 07 03:07:20] radvd (409813): r1-eth1 not found: No such device
+[May 07 03:07:20] radvd (409813): r1-eth0 not found: No such device
+[May 07 03:07:20] radvd (409813): resuming normal operation
