@@ -126,6 +126,8 @@ def run_total_v4_experiment(n=50, num_switches=NUM_SWITCHES):
         t = threading.Thread(target=measure_total_v4, args=(host, results, lock))
         threads.append(t)
         t.start()
+        # 순차 부팅 시뮬레이션: DHCP 서버 부하를 분산 (현실성 개선)
+        time.sleep(0.05)
 
     for t in threads:
         t.join()
